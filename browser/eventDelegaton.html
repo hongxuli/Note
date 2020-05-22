@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="test">
+        <li>
+            <p>11111111111</p>
+        </li>
+        <li>
+            <div>
+                22222222
+            </div>
+        </li>
+        <li>
+            <span>3333333333</span>
+        </li>
+        <li>4444444</li>
+    </ul>
+</body>
+<script>
+    // 适合用事件委托的事件：click，mousedown，mouseup，keydown，keyup，keypress。
+    // 值得注意的是，mouseover和mouseout虽然也有事件冒泡，但是处理它们的时候需要特别的注意，
+    // 因为需要经常计算它们的位置，处理起来不太容易。不适合的就有很多了，举个例子，mousemove，
+    // 每次都要计算它的位置，非常不好把控，
+    // 在不如说focus，blur之类的，本身就没用冒泡的特性，自然就不能用事件委托了。
+
+    
+    // 怎么让当前target 是 li的时候执行事件   
+    　　var oUl = document.getElementById('test');
+        oUl.addEventListener('click', function (ev) {
+            console.log(ev.target);
+            var target = ev.target;
+            while (target !== oUl) {
+                if (target.tagName.toLowerCase() == 'li') {
+                    console.log('li click~');
+                    break;
+                }
+                target = target.parentNode;
+            }
+        })
+</script>
+</html>
