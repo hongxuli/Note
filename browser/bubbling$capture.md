@@ -11,7 +11,7 @@ benefits:
     - you dont need to unbind/bind the listener form the descendant elements which need to be deleted/added
 
 regular: 
-```
+``` js
 <div id="box">
         <input type="button" id="add" value="添加" />
         <input type="button" id="remove" value="删除" />
@@ -42,7 +42,7 @@ window.onload = function(){
 ```
 event delegation
 
-```
+```js
 window.onload = function(){
             var Add = document.getElementById("add");
             var Remove = document.getElementById("remove");
@@ -70,7 +70,7 @@ window.onload = function(){
 ### prevent event bubbling 
 ---
 1. add  event.stopPropagation()
-```
+```js
     $('div').mousedown(function(e){
         var e = event || window.event
          event.stopPropagation()
@@ -78,7 +78,7 @@ window.onload = function(){
 ```
 2. set false in handler
 return false not only stoped ths event bubbling but also stoped the event  itself
-```
+```js
   $('div').mousedown(function(e){
         var e = event || window.event
          return false
@@ -86,6 +86,7 @@ return false not only stoped ths event bubbling but also stoped the event  itsel
 ```
 3. event.target == event.currentTarget 
 ![](images/2020-05-03-01-37-49.png)
+**currentTarget始终是监听事件者，而target是事件的真正发出者**
 
 
 ### prevent default event
