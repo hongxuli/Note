@@ -1,3 +1,12 @@
+---
+layout: blog-post
+title: method in construtor vs method on prototype
+tags:
+  - js
+date: 2020-05-12
+description: compare diffience between method in construtor vs method on prototype
+---
+
 ``` JS
 // 构造函数A
 

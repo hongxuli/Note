@@ -1,9 +1,18 @@
+---
+layout: blog-post
+title: Decorator 
+tags:
+  - js
+date: 2020-08-11
+description: Es6 decorator 
+---
+
 ### Decorator
 
-- [#### class decorator](#h4-id%22class-decorator-626%22class-decoratorh4)
-- [#### class function decorator](#h4-id%22class-function-decorator-383%22class-function-decoratorh4)
-- [#### why decorator cant use at function](#h4-id%22why-decorator-cant-use-at-function-355%22why-decorator-cant-use-at-functionh4)
-- [#### mixins](#h4-id%22mixins-326%22mixinsh4)
+- [#### class decorator](#h4-idclass-decorator-43class-decoratorh4)
+- [#### class function decorator](#h4-idclass-function-decorator-43class-function-decoratorh4)
+- [#### why decorator cant use at function](#h4-idwhy-decorator-cant-use-at-function-43why-decorator-cant-use-at-functionh4)
+- [#### mixins](#h4-idmixins-43mixinsh4)
 
 - trait : (module)    Trait 也是一种装饰器，效果与 Mixin 类似，但是提供更多功能，比如防止同名方法的冲突、排除混入某些方法、为混入的方法起别名等等
 
@@ -88,10 +97,8 @@ class MyReactComponent extends React.Component {}
 
 export default connect(mapStateToProps, mapDispatchToProps)(MyReactComponent);
 //  could rewrite as 
-
+@connect(mapStateToProps, mapDispatchToProps)
 class MyReactComponent extends React.Component {}
-
-export default connect(mapStateToProps, mapDispatchToProps)(MyReactComponent);
 ```
 
 

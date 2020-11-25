@@ -63,3 +63,27 @@
 ```
 ![](2020-04-22-18-10-16.png)
 ![](2020-04-22-18-10-27.png)
+
+
+
+### use @import 
+from GoogleFonts
+直接引入
+优点: 不用自己去维护font-face
+``` CSS
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300&display=swap');
+
+font-family: 'Lemonada', cursive;
+```
+
+
+### 字体格式
+不同的浏览器支持不同格式的字体
+![](images/2020-08-13-13-48-39.png)
+
+- ttf
+- otf
+- eot
+- woff
+- svg
+  
