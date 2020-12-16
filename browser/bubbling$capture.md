@@ -1,4 +1,11 @@
-
+---
+layout: blog-post
+title: Event delegation  Bubbling&Capture
+tags:
+  - Browser
+date: 2020-02-10
+description: 
+---
 
 ### event delegation 
 ----
@@ -64,6 +71,18 @@ window.onload = function(){
             
         }
 
+```
+### bubbling and capturing 
+bubble up   capture down 
+With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements.
+
+With capturing, the event is first captured by the outermost element and propagated to the inner elements.
+
+``` JS
+elem.addEventListener(...{capture:true})
+elem.addEventListener(...true)
+// If it’s false (default), then the handler is set on the bubbling phase.
+// If it’s true, then the handler is set on the capturing phase.
 ```
 
 

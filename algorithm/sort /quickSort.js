@@ -76,7 +76,7 @@ function quickSort(array, start, end) {
 }
 
 function partition(array, start, end) {
-  let pivot = array[start]; // 取第一个值为枢纽值，获取枢纽值的大小
+  let pivsot = array[start]; // 取第一个值为枢纽值，获取枢纽值的大小
 
   // 当 start 等于 end 指针时结束循环
   while (start < end) {
@@ -109,4 +109,9 @@ var a = [ 4, 5, 7, 8, 1, 2,3,6];
 var len = a.length
 quickSort(a, 0, len-1)
 console.log(a);
+
+
+
+
+
 

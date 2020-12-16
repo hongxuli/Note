@@ -13,3 +13,5 @@ Mixins将会修改state，所以开发者无法直接的确定state来自哪里�
 - ES6 classes. They don’t support mixins.
 - Indirection. Mixins that modify state make it tricky to tell where that state is coming from, especially when there’s more than one mixin.
 - Naming collisions. Two mixins that try to update the same piece of state may overwrite one another. The createClass API included a check that would warn you if two mixins had a getInitialState value with the same keys, but it wasn’t airtight.
+
+

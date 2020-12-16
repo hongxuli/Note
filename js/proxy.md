@@ -137,3 +137,8 @@ setTimeout(() => {
 
 Proxy有13种数据劫持的操作:
 ![](images/2020-05-25-13-25-44.png)
+```
+---
+Vue 3.0 gives up use object.defineProperty(use to define or change property of  current object and return the object) and use Proxy to hajack data so that it can monitor the change of data
+
+cause object.defineProperty can only monitor properties. However Proxy can monitor the entire Object.

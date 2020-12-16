@@ -32,3 +32,14 @@ height:100%无效的原因就是：规范中规定了如果包含块的高度没
 
 
 ### calc()  千万别写成 calc ()  空格   运算符之间有空格
+
+
+### css中括号的用法 []
+``` CSS
+
+span[class='test']  所以带有class类名是test的span
+span[class=*='test'] 所有class包含了test的span
+span[class] 所有带class的span
+[class='all'] 页面上所有class=all的标签
+[class*='as'] 页面上所有class里包含as的标签
+```
