@@ -226,3 +226,33 @@ public function mkFunc(){
 0
 1
 ```
+
+### isset() / empety()
+1. isset() - is variable or array key defined  (different than null)
+2. empety() - is false, 0 , empety array
+
+
+### compact() extract()
+
+compact() — 建立一个数组，包括变量名和它们的值
+``` JS
+<?php
+$city  = "San Francisco";
+$state = "CA";
+$event = "SIGGRAPH";
+
+$location_vars = array("city", "state");
+
+$result = compact("event", $location_vars);
+print_r($result);
+?>
+=====>
+Array
+(
+    [event] => SIGGRAPH
+    [city] => San Francisco
+    [state] => CA
+) 
+```
+
+extract — 从数组中将变量导入到当前的符号表
