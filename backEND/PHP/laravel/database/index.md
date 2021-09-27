@@ -1,4 +1,4 @@
-### create database and migration
+## create database and migration
 
 php artisan make:mode ModelName -m 
 
@@ -6,7 +6,7 @@ php artisan make:mode ModelName -m
 
 
 
-### update table 
+## update table 
 quick way: 
 
 php artisan migrate:refresh --path=/database/migrations/your_file_name.php
